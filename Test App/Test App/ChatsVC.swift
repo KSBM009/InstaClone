@@ -55,7 +55,7 @@ extension ChatsVC: UITableViewDataSource, UITableViewDelegate{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: chatsTableViewCell.identifier, for: indexPath) as! chatsTableViewCell
         
-        if (0..<3).contains(indexPath.row) {
+        if (0..<chatArray.count).contains(indexPath.row) {
             
             // Get the items at the current index
             let item = chatArray[indexPath.item]
