@@ -67,12 +67,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
             
-          
-            
             // Appending the indexpath to avoid story and data conflict
             let indexVal = indexPath.row - 1
+            
+            // Adding Tag Value to sendBtn and Action
             cell.sendBtn.tag = indexPath.row - 1
             cell.sendBtn.addTarget(self, action: #selector(redirectingUser), for: .touchUpInside)
+            
             // Get the items at the current index
             let item = postArray[indexVal]
             
